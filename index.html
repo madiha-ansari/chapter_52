@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating Images and Text</title>
+    <style>
+        /* CSS for hiding elements */
+        .hidden {
+            display: none;
+        }
+        /* CSS for making text larger */
+        .big {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Image of the blobfish -->
+    <h2>Click the Blobfish to Make it Disappear!</h2>
+    <img src="gh.jpg" id="ugly" onClick="makeInvisible();" alt="Blobfish">
+
+    <!-- Paragraph for the text example -->
+    <h2>Mouse over the text to make it bigger!</h2>
+    <p id="p1" class="normal" onMouseOver="makeBig();">This text will get bigger when you hover over it.</p>
+
+    <!-- JavaScript code -->
+    <script>
+        // Function to make the image invisible
+        function makeInvisible() {
+            document.getElementById("ugly").className = "hidden";
+        }
+
+        // Function to make the paragraph text bigger
+        function makeBig() {
+            document.getElementById("p1").className += " big";
+        }
+    </script>
+
+</body>
+</html>
